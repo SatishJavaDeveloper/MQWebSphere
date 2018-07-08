@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by KW Boey (ITSC) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:amg="http://www.dhl.com/ACA" targetNamespace="http://www.dhl.com/ACA" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="MsgHdrTyp">
+		<xs:all>
+			<xs:element name="MsgTyp">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="7"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="MsgMajVsn">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="MsgMinVsn">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="SrcMsgId" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CrtnDm">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="25"/>
+						<xs:maxLength value="25"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LastProcessedDm" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="25"/>
+						<xs:maxLength value="25"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="MsgOrgnatorAppl">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="25"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="MsgGenAddr" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="25"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="MsgSeq" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="18"/>
+						<xs:fractionDigits value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LastProcessedBy" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="MsgRef" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="35"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="MsgReqstor" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="MsgReqstorAddr" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:amg="http://www.dhl.com/AMG" targetNamespace="http://www.dhl.com/AMG" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="MG-HD01.XSD"/>
+	<xs:element name="MGMsg">
+		<xs:annotation>
+			<xs:documentation>MGMsg ROOT element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MsgHdr" type="amg:MsgHdrTyp">
+					<xs:annotation>
+						<xs:documentation>Message Header</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="OutOfBndInfo" type="amg:OutOfBndInfoTyp">
+					<xs:annotation>
+						<xs:documentation>Out of bond Message</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- Complex Type Definitions -->
+	<!-- BondManagement Type Definition -->
+	<xs:complexType name="OutOfBndInfoTyp">
+		<xs:sequence>
+			<xs:element name="ShpAWBNum">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="35"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PcId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="35"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NumOfPcs">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="8"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="BondLoc" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="25"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Tmstmp">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="25"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="UsrId" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="60"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

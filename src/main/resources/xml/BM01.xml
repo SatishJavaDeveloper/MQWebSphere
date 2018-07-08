@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <MGMsg xmlns="http://www.dhl.com/ACA" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dhl.com/ACABM01.XSD"> 
+     <MsgHdr> 
+         <MsgTyp>MG-BM01</MsgTyp> 
+ <MsgMajVsn>1</MsgMajVsn>
+  <MsgMinVsn>2</MsgMinVsn>
+ <CrtnDm>2018-03-05 13:20:45+01:00</CrtnDm> 
+ <LastProcessedDm>2018-03-05 20:20:45+08:00</LastProcessedDm> 
+ <MsgOrgnatorAppl>ACA</MsgOrgnatorAppl>
+  <MsgGenAddr>BSL-GTW</MsgGenAddr>
+ <LastProcessedBy>AMG</LastProcessedBy> 
+ </MsgHdr> 
+ <BondMgmt>
+  <MvmtNo>BGY2555</MvmtNo> 
+ <TdocNo>BGY000544937</TdocNo>
+  <ShpAWBNum>1836221004</ShpAWBNum>
+  <PcId>JD014600006408027680</PcId> 
+ <NumOfPcs>1</NumOfPcs> 
+ <BondLoc>A1-R-S21-R4</BondLoc> 
+ <Tmstmp>2018-03-05 13:20:45+01:00</Tmstmp> 
+ <Evt>IN</Evt> 
+ <DeclaredShptWeight>50.00</DeclaredShptWeight>
+  <ShpSts>HOLD</ShpSts>
+ <Shpdescrp>SPARE PARTS FOR LOOMS</Shpdescrp>
+ <UbdDestSrvaCd/> 
+<UbdDestLocCd/> 
+</BondMgmt> 
+</MGMsg> 

@@ -14,15 +14,12 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
-import javax.xml.stream.XMLStreamWriter;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
 
 import com.cipherdot.aca.model.BM01.MGMsg;
-import com.cipherdot.aca.model.BM01.ObjectFactory;
 
 @Service
 public class Simulate {

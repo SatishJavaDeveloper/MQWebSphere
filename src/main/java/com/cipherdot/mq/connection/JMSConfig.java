@@ -1,14 +1,13 @@
 package com.cipherdot.mq.connection;
 
-
-import javax.jms.MessageListener;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
 import org.springframework.jms.listener.SimpleMessageListenerContainer;
+import org.springframework.jms.support.converter.SimpleMessageConverter;
 
 import com.ibm.mq.jms.MQQueueConnectionFactory;
 import com.ibm.msg.client.wmq.WMQConstants;
@@ -46,22 +45,23 @@ public class JMSConfig {
 	}
 	@Bean
 	public SimpleMessageListenerContainer queueContainer(MQQueueConnectionFactory mqQueueConnectionFactory) {
-		MessageListener listener = new BM01Listener();
+		
 		SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
 		container.setConnectionFactory(mqQueueConnectionFactory);
 		container.setDestinationName("QL.ACADMGPTLBM01");
-		container.setMessageListener(listener);
+		container.setMessageListener(null);
+		// container.setMessageListener(listener);
 		container.start();
 		System.out.println("connected to mq BM01");
 		return container;
 	}
 	@Bean
 	public SimpleMessageListenerContainer queueContainer1(MQQueueConnectionFactory mqQueueConnectionFactory) {
-		MessageListener listener = new SU01Listener();
+		
 		SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
 		container.setConnectionFactory(mqQueueConnectionFactory);
 		container.setDestinationName("QL.ACADMGPTLSU01");
-		container.setMessageListener(listener);
+		container.setMessageListener(null);
 		container.start();
 		System.out.println("connected to mq SU01");
 		return container;

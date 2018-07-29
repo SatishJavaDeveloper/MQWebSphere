@@ -1,4 +1,4 @@
-package com.cipherdot.mq.connection;
+/*package com.cipherdot.mq.connection;
 
 import javax.jms.BytesMessage;
 
@@ -34,4 +34,4 @@ public class BM01Listener implements MessageListener {
 			}
 	}
 
-}
+}*/
